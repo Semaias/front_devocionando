@@ -8,15 +8,15 @@ const Footer = () => {
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-[#394C40] ">
           <div className="relative flex-shrink-0 w-14 h-14 flex items-center justify-center">
             <Image
-              src="/church.png"
+              src="/jsjsjs.svg"
               alt="Monograma do casal"
               fill
               className="object-cover object-center"
             />
           </div>
-          <span className="ml-3 font-bold text-xl">Devocionando</span>
+          <span className="ml-3 font-bold text-xl">Janielle & Semaias</span>
         </a>
-        <p className="text-balance text-center text-sm text-gray-90 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-90 sm:py-2 sm:mt-0 mt-4">© 2025 Gabriel e Semaias |
+        <p className="text-balance text-center text-sm text-[#394C40] sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-[#394C40] sm:py-2 sm:mt-0 mt-4">© 2025 Semaias Rangel |
           Todos os direitos reservados
         </p>
 

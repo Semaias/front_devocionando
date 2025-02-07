@@ -41,8 +41,8 @@ const Navbar: React.FC = () => {
 
                 {/* MENU ICON (for desktop) */}
                 <div className="hidden font-medium mr-11  lg:flex space-x-4">
-                    <Link href="/#" className="hover:font-bold transition-all duration-300">
-                        Página 1
+                    <Link href="/blog" className="hover:font-bold transition-all duration-300">
+                        Blog
                     </Link>
                     <Link href="/#" className="hover:font-bold transition-all duration-300">
                         Página 2
@@ -63,8 +63,8 @@ const Navbar: React.FC = () => {
                     </button>
                     <ul className="flex flex-col items-center space-y-6">
                         <li>
-                            <Link href="/#" className=" text-2xl" onClick={toggleMenu}>
-                                item 1
+                            <Link href="/blog" className=" text-2xl" onClick={toggleMenu}>
+                                Blog
                             </Link>
                         </li>
                         <li>

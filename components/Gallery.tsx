@@ -18,18 +18,20 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 const Gallery = () => {
     const images = [
         // Caminho a partir de /public
-        { url: "/img001.jpg", alt: "Legenda da imagem 1" }, 
+        { url: "/img001.jpg", alt: "Legenda da imagem 1" },
         { url: "/img002.jpg", alt: "Legenda da imagem 2" },
         { url: "/img003.jpg", alt: "Legenda da imagem 3" },
-        { url: "/img001.jpg", alt: "Legenda da imagem 4" }, 
+        { url: "/img001.jpg", alt: "Legenda da imagem 4" },
         { url: "/img002.jpg", alt: "Legenda da imagem 5" },
         { url: "/img003.jpg", alt: "Legenda da imagem 6" },
     ];
 
     return (
         <section>
-            <div className='flex justify-center'>
-                <h2 className='text-2xl font-black'>Aqui você vai encontrar... muita coisa (mostrar as opções)</h2>
+            <div className='container px-10 justify-center'>
+                <h2 className='text-2xl text-center font-black'>
+                    Aqui você vai encontrar... muita coisa (mostrar as opções)
+                </h2>
             </div>
             <div className='container mx-auto px-5 flex items-center content-center'>
                 <Swiper

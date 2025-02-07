@@ -9,11 +9,13 @@ const Contact = () => {
                     <iframe
                         width="100%"
                         height="100%"
-                        className="absolute inset-0"
+                        className="absolute inset-0 
+                        lg:grayscale-[0.5] hover:grayscale-0 hover:saturate-[1.2]
+                        sm:grayscale-[0] md:grayscale-[0]
+                        transition-all ease-in-out duration-400"
                         title="map"
                         scrolling="no"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.4901696626727!2d-35.205448009095356!3d-6.268901900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b287783a441465%3A0x3af17d483cebfd6d!2sPrimeira%20Igreja%20Batista%20em%20Goianinha!5e0!3m2!1spt-BR!2sbr!4v1738616823739!5m2!1spt-BR!2sbr"
-                        style={{ filter: "grayscale(0.1) contrast(1.2) opacity(0.7)" }} // Style corrigido
                     ></iframe>
 
                     <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
@@ -23,7 +25,7 @@ const Contact = () => {
                         </div>
                         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-                            <a className="leading-relaxed">example@email.com</a>
+                            <a className="leading-relaxed">email@email.com</a>
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">WHATASPP</h2>
                             <p className="leading-relaxed">123-456-7890</p>
                         </div>
@@ -63,8 +65,10 @@ const Contact = () => {
                         ></textarea>
                     </div>
 
-                    <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-                    <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+                    <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Enviar</button>
+                    <p className="text-xs text-gray-500 mt-3">
+                        Uma legenda avulsamente aleatória
+                    </p>
                 </div>
             </div>
         </section>
