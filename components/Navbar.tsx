@@ -44,11 +44,11 @@ const Navbar: React.FC = () => {
                     <Link href="/blog" className="hover:font-bold transition-all duration-300">
                         Blog
                     </Link>
-                    <Link href="/#" className="hover:font-bold transition-all duration-300">
-                        Página 2
+                    <Link href="/cadastrar-escritor" className="hover:font-bold transition-all duration-300">
+                        Cadastrar Escritor
                     </Link>
-                    <Link href="/#" className="hover:font-bold transition-all duration-300">
-                        Página 3
+                    <Link href="/cadastrar-artigo" className="hover:font-bold transition-all duration-300">
+                        Cadastrar Artigo
                     </Link>
                 </div>
             </div>
@@ -68,13 +68,13 @@ const Navbar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/#" className=" text-2xl" onClick={toggleMenu}>
-                                item 2
+                            <Link href="/cadastrar-escritor" className=" text-2xl" onClick={toggleMenu}>
+                                Cadastrar Escritor
                             </Link>
                         </li>
                         <li>
-                            <Link href="/#" className=" text-2xl" onClick={toggleMenu}>
-                                item 3
+                            <Link href="/cadastrar-artigo" className=" text-2xl" onClick={toggleMenu}>
+                                Cadastrar Artigo
                             </Link>
                         </li>
                     </ul>

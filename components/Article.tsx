@@ -23,7 +23,7 @@ const Article = () => {
     const formattedParagraphs = content.split(/\n\n/).filter(p => p.trim() !== '');
 
     return (
-        <section className="py-20 bg-gray-100">
+        <section className="p-20 bg-gray-100">
             <div className="container mx-auto px-5 max-w-3xl">
                 <div className="mb-6">
                     <Link href="/" className="text-indigo-500 hover:underline">
@@ -32,14 +32,15 @@ const Article = () => {
                 </div>
 
                 <article className="bg-white p-6 rounded-lg shadow-lg">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-3">
+                    <h1 id='title' className="text-3xl font-bold text-gray-900 mb-3">
                         A ATUALIDADE DAS PALAVRAS DE JESUS
                     </h1>
-                    <p className="text-gray-500 text-sm mb-4">
-                        Semaias Rangel - 22 de Fevereiro, 2025
+                    <p id='author' className="text-gray-500 text-sm mb-4">
+                        Semaias Rangel - <span id='postDate'>22 de fevereiro de 2025</span>
                     </p>
 
-                    <div className="mb-6">
+                    {/* Banner - ainda em dúvida se vai ter isso, mas por enquanto eu vou deixar */}
+                    <div id='articleCover' className="mb-6">
                         <Image
                             src="/img001.jpg"
                             alt="Imagem do artigo"
