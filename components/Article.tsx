@@ -23,7 +23,7 @@ const Article = () => {
     const formattedParagraphs = content.split(/\n\n/).filter(p => p.trim() !== '');
 
     return (
-        <section className="p-20 bg-gray-100">
+        <section className="pt-20 bg-gray-100">
             <div className="container mx-auto px-5 max-w-3xl">
                 <div className="mb-6">
                     <Link href="/" className="text-indigo-500 hover:underline">
@@ -73,8 +73,8 @@ const Article = () => {
 
 
                     <div className="mt-8">
-                        <Link href="/blog" className="inline-block bg-indigo-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-600 transition">
-                            &larr; Voltar para o Blog
+                        <Link href="/" className="inline-block bg-indigo-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-600 transition">
+                            &larr; Home
                         </Link>
                     </div>
                 </article>
