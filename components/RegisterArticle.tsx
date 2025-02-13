@@ -19,36 +19,40 @@ const ArticleForm = () => {
     const [author, setAuthor] = useState({ name: "", role: "", image: null });
     const [imagePreview, setImagePreview] = useState(null);
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        if (name in article) {
-            setArticle((prev) => ({ ...prev, [name]: value }));
-        } else {
+        
+        if (selectedAuthor === "new") {
             setAuthor((prev) => ({ ...prev, [name]: value }));
+        } else {
+            setArticle((prev) => ({ ...prev, [name]: value }));
         }
     };
+    
 
-    const handleImageChange = (e) => {
-        const file = e.target.files[0];
+    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0]; // O operador `?.` evita erros caso `files` seja `null`
         if (file) {
             setAuthor((prev) => ({ ...prev, image: file }));
             setImagePreview(URL.createObjectURL(file));
         }
     };
+    
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log("Artigo cadastrado:", article);
-
+    
         if (selectedAuthor === "new") {
             console.log("Novo autor cadastrado:", author);
-            setAuthors([...authors, author]); // Adiciona novo autor à lista
+            setAuthors((prev) => [...prev, author]); // Adiciona novo autor à lista corretamente
         } else {
             console.log("Autor selecionado:", selectedAuthor);
         }
-
+    
         alert("Artigo cadastrado com sucesso!");
     };
+    
 
     const selectedAuthorData = authors.find((a) => a.name === selectedAuthor);
 
