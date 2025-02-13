@@ -21,7 +21,8 @@ const ArticleForm = () => {
         role: "",
         image: null,
     });    
-    const [imagePreview, setImagePreview] = useState(null);
+    const [imagePreview, setImagePreview] = useState<string | null>(null);
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
