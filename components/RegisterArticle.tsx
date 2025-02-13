@@ -10,10 +10,11 @@ const ArticleForm = () => {
         fullText: "",
     });
 
-    const [authors, setAuthors] = useState([
+    const [authors, setAuthors] = useState<{ name: string; role: string; image: string | null }[]>([
         { name: "Semaias Rangel", role: "O Amigo do Cara", image: "/church.png" },
         { name: "Gabriel Barroso", role: "O Cara", image: "/img001.jpg" },
     ]);
+    
 
     const [selectedAuthor, setSelectedAuthor] = useState("new");
     const [author, setAuthor] = useState<{ name: string; role: string; image: File | null }>({
