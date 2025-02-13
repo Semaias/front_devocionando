@@ -85,12 +85,12 @@ const AuthorForm = () => {
                     </button>
                 </form>
                 {author.name && (
-                    <div className="mt-8 text-center">
-                        <h3 className="text-xl font-bold">{author.name}</h3>
-                        <p className="text-gray-600">{author.role}</p>
-                        {imagePreview && (
-                            <img src={imagePreview} alt={author.name} className="w-24 h-24 mx-auto mt-4 rounded-full" />
-                        )}
+                    <div className="mt-8 flex justify-center items-center">
+                        <div className="text-right pr-5">
+                            <h3 className="text-xl font-bold">{author.name}</h3>
+                            <p className="text-gray-600">{author.role}</p>
+                        </div>
+                        {imagePreview && <img src={imagePreview} className="w-24 h-24 rounded-full" />}
                     </div>
                 )}
             </div>

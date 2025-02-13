@@ -30,10 +30,12 @@ const ArticleForm = () => {
         
         if (selectedAuthor === "new") {
             setAuthor((prev) => ({ ...prev, [name]: value }));
-        } else {
-            setArticle((prev) => ({ ...prev, [name]: value }));
-        }
+        } 
+    
+        // Permitir que os campos do artigo sempre possam ser editados
+        setArticle((prev) => ({ ...prev, [name]: value }));
     };
+    
     
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
