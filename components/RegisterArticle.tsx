@@ -51,7 +51,11 @@ const ArticleForm = () => {
     
         if (selectedAuthor === "new") {
             console.log("Novo autor cadastrado:", author);
-            setAuthors((prev) => [...prev, author]); // Adiciona novo autor à lista corretamente
+            setAuthors((prev) => [
+                ...prev, 
+                { ...author, image: author.image instanceof File ? URL.createObjectURL(author.image) : author.image }
+              ]);
+               // Adiciona novo autor à lista corretamente
         } else {
             console.log("Autor selecionado:", selectedAuthor);
         }
