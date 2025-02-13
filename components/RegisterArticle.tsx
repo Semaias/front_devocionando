@@ -16,7 +16,11 @@ const ArticleForm = () => {
     ]);
 
     const [selectedAuthor, setSelectedAuthor] = useState("new");
-    const [author, setAuthor] = useState({ name: "", role: "", image: null });
+    const [author, setAuthor] = useState<{ name: string; role: string; image: File | null }>({
+        name: "",
+        role: "",
+        image: null,
+    });    
     const [imagePreview, setImagePreview] = useState(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -31,12 +35,13 @@ const ArticleForm = () => {
     
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0]; // O operador `?.` evita erros caso `files` seja `null`
+        const file = e.target.files?.[0]; 
         if (file) {
-            setAuthor((prev) => ({ ...prev, image: file }));
+            setAuthor((prev) => ({ ...prev, image: file })); 
             setImagePreview(URL.createObjectURL(file));
         }
     };
+    
     
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
