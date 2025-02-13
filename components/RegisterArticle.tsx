@@ -111,7 +111,7 @@ const ArticleForm = () => {
                             value={article.resume}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                            rows="3"
+                            rows={3}
                             required
                         ></textarea>
                     </div>
@@ -134,7 +134,7 @@ const ArticleForm = () => {
                             value={article.fullText}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                            rows="10"
+                            rows={10}
                             required
                         ></textarea>
                     </div>
