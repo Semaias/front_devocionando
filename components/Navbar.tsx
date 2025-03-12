@@ -50,6 +50,9 @@ const Navbar: React.FC = () => {
                     <Link href="/cadastrar-artigo" className="hover:font-bold transition-all duration-300">
                         Cadastrar Artigo
                     </Link>
+                    <Link href="/cadastrar-tudo" className="hover:font-bold transition-all duration-300">
+                        Cadastrar Tudo
+                    </Link>
                 </div>
             </div>
 
@@ -75,6 +78,11 @@ const Navbar: React.FC = () => {
                         <li>
                             <Link href="/cadastrar-artigo" className=" text-2xl" onClick={toggleMenu}>
                                 Cadastrar Artigo
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/cadastrar-tudo" className=" text-2xl" onClick={toggleMenu}>
+                                Cadastrar Tudo
                             </Link>
                         </li>
                     </ul>
