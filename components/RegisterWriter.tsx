@@ -99,3 +99,48 @@ const AuthorForm = () => {
 };
 
 export default AuthorForm;
+
+// {/* Preview */}
+// <div className="mt-12 bg-white p-6 rounded-lg shadow-lg">
+// <h2 className="text-2xl font-bold text-gray-900 mb-3">
+//     {article.title || "Título do Artigo"}
+// </h2>
+// <p className="text-gray-500 text-sm mb-4">{article.category || "Categoria"}</p>
+
+// {selectedAuthor !== "new" && selectedAuthorData ? (
+//     <div className="mt-8 flex justify-center items-center">
+//         <div className="text-right pr-5">
+//             <h3 className="text-xl font-bold">{selectedAuthorData.name}</h3>
+//             <p className="text-gray-600">{selectedAuthorData.role}</p>
+//         </div>
+//         {selectedAuthorData.image && (
+//             <img src={selectedAuthorData.image} alt={selectedAuthorData.name} className="w-24 h-24 rounded-full" />
+//         )}
+//     </div>
+// ) : (
+//     author.name && (
+//         <div className="mt-8 flex justify-center items-center">
+//             <div className="text-right pr-5">
+//                 <h3 className="text-xl font-bold">{author.name}</h3>
+//                 <p className="text-gray-600">{author.role}</p>
+//             </div>
+//             {imagePreview && <img src={imagePreview} className="w-24 h-24 rounded-full" />}
+//         </div>
+//     )
+// )}
+
+// <p className="text-gray-700 italic text-center my-4">{article.resume || "Resumo..."}</p>
+
+// {formattedParagraphs.map((paragraph, index) => (
+//     <p key={index} className="text-gray-700 text-justify indent-5 leading-relaxed mb-4">
+//         {paragraph.split(/(##.*?##|__.*?__)/g).map((chunk, i) => {
+//             if (chunk.startsWith('##') && chunk.endsWith('##')) {
+//                 return <span className="font-black capitalize" key={i}>{chunk.replace(/##/g, '')} <br /></span>;
+//             } else if (chunk.startsWith('__') && chunk.endsWith('__')) {
+//                 return <span className="italic" key={i}>{chunk.replace(/__/g, '')}</span>;
+//             }
+//             return chunk;
+//         })}
+//     </p>
+// ))}
+// </div>
